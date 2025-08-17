@@ -1787,3 +1787,127 @@ nav a:hover {
     height: 45px;
   }
 }
+
+/* =========================================
+   Hero Section
+========================================= */
+.hero-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+.hero-section .hero-cta {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-section .hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.hero-section .hero-tagline {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero-section .hero-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .hero-consult-note {
+  color: #fff;
+  opacity: 0.85;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .hero-consult-svg {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* Hero Section Button - Match Pre-Plans Consult Style */
+.hero-section .btn-consult.btn-large.hero-btn-gradient {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #2d3748;
+  font-size: 1.4rem;
+  padding: 1.5rem 3.5rem;
+  border-radius: 60px;
+  box-shadow: 0 15px 35px rgba(255, 236, 210, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  animation: enhancedPulse 3s ease-in-out infinite;
+}
+
+.hero-section .btn-consult.btn-large.hero-btn-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.hero-section .btn-consult.btn-large.hero-btn-gradient:hover::before {
+  left: 100%;
+}
+
+.hero-section .btn-consult.btn-large.hero-btn-gradient:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 25px 50px rgba(255, 236, 210, 0.6);
+  background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
+}
+
+.hero-section .btn-consult.btn-large.hero-btn-gradient:active {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.hero-section .btn-consult.btn-large.hero-btn-gradient:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 236, 210, 0.5), 0 15px 35px rgba(255, 236, 210, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-section .btn-consult.btn-large.hero-btn-gradient {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section .btn-consult.btn-large.hero-btn-gradient {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
