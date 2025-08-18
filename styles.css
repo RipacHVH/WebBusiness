@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif; /* Limit to two font families, Poppins primary */
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   background-attachment: fixed;
   color: var(--text-dark);
@@ -51,25 +51,27 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================================
-   Typography System
-========================================= */
+/* === Typography Consistency Improvements === */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  letter-spacing: 0.01em;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+h1 { font-size: 2.5rem; font-weight: 800; }
+h2 { font-size: 2rem; font-weight: 700; }
+h3 { font-size: 1.5rem; font-weight: 700; }
+h4 { font-size: 1.2rem; font-weight: 600; }
+h5 { font-size: 1rem; font-weight: 600; }
+h6 { font-size: 0.95rem; font-weight: 600; }
 
-p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  opacity: 0.9;
+p, li, input, textarea, select, button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* =========================================
@@ -92,15 +94,15 @@ p {
    Header Enhancement
 ========================================= */
 .site-header {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.10), 0 1.5px 6px rgba(99,102,241,0.06);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 
 .header-content {
@@ -1797,7 +1799,6 @@ nav a:hover {
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
-  animation: floatUp 6s ease-in-out infinite;
 }
 
 .hero-section .hero-cta {
@@ -1815,7 +1816,7 @@ nav a:hover {
   color: #fff;
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  animation: titleGlow 2s ease-in-out infinite alternate;
+  animation: titleGlow 2s ease-in-out infinite alternate, floatUp 6s ease-in-out infinite;
 }
 
 .hero-section .hero-tagline {
@@ -1824,6 +1825,7 @@ nav a:hover {
   margin-bottom: 2.5rem;
   line-height: 1.6;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  animation: floatUp 6s ease-in-out infinite;
 }
 
 .hero-section .hero-btn-group {

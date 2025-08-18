@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WebGrowth | Професионални сайтове на абонамент</title>
+  <title>WebGrowth | Сайтове на абонамент</title>
   <meta name="description" content="Професионални уебсайтове на месечен абонамент. Включено: дизайн, хостинг, поддръжка, SEO. Без големи първоначални инвестиции. Започнете от 129лв/месец." />
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:title" content="WebGrowth | Сайтове на абонамент" />
+  <meta property="og:description" content="Професионални уебсайтове на месечен абонамент. Включено: дизайн, хостинг, поддръжка, SEO. Без големи първоначални инвестиции." />
+  <meta property="og:image" content="https://webgrowth.bg/og-image.jpg" />
+  <meta property="og:url" content="https://webgrowth.bg" />
+  <meta property="og:type" content="website" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WebGrowth | Сайтове на абонамент" />
+  <meta name="twitter:description" content="Професионални уебсайтове на месечен абонамент от 129лв/мес" />
+  <meta name="twitter:image" content="https://webgrowth.bg/twitter-image.jpg" />
+  
+  <!-- Performance optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
@@ -21,6 +43,9 @@
       </div>
       <nav aria-label="Главна навигация">
         <a href="#plans" class="nav-link">Планове</a>
+        <a href="#how-it-works" class="nav-link">Стъпка по стъпка</a>
+        <a href="#clients" class="nav-link">Клиенти</a>
+        <a href="#faq" class="nav-link">Въпроси</a>
         <button class="btn-consult nav-consult-btn" id="navConsultBtn">Безплатна консултация</button>
       </nav>
     </div>
@@ -34,7 +59,7 @@
         Разберете кой план е най-подходящ за вашия бизнес и получете индивидуална оферта без ангажимент.
       </p>
       <div class="hero-btn-group">
-        <button class="btn-consult btn-large hero-btn-gradient" id="heroConsultBtn">Безплатна консултация</button>
+        <button class="btn-consult btn-large hero-btn-gradient" id="openConsult4">Безплатна консултация</button>
         <span class="hero-consult-note">
           <svg width="20" height="20" class="hero-consult-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#fff" stroke-opacity="0.5"/><path d="M8 12l2 2 4-4" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Консултацията е напълно безплатна и не ви обвързва с договор
@@ -57,7 +82,7 @@
 
     <!-- Семпъл сайт -->
     <article class="plan-card highlighted" itemscope itemtype="https://schema.org/Offer">
-      <h4 itemprop="name">Семпъл уебсайт</h4>
+      <h4 itemprop="name">Базов уебсайт</h4>
       <div class="flag">30 дни БЕЗПЛАТНО</div>
       <p>до <span itemprop="price" content="129">129 лв</span>/мес</p>
       <ul>
@@ -84,7 +109,7 @@
 
     <!-- Комплексен сайт -->
     <article class="plan-card highlighted" itemscope itemtype="https://schema.org/Offer">
-      <h4 itemprop="name">Комплексен уебсайт</h4>
+      <h4 itemprop="name">Сложен уебсайт</h4>
       <p>до <span itemprop="price" content="978">978 лв</span>/мес</p>
       <ul>
         <li>Неограничен брой страници</li>
@@ -391,9 +416,9 @@
         <input type="email" name="email" placeholder="Email" required class="input-field" />
         <select name="complexity" class="input-field" required>
           <option value="">Изберете тип сайт</option>
-          <option value="simple">Семпъл</option>
+          <option value="simple">Базов</option>
           <option value="medium">Стандартен</option>
-          <option value="complex">Комплексен</option>
+          <option value="complex">Сложен</option>
         </select>
         <textarea name="message" placeholder="Кратко съобщение / нужди" class="textarea-fixed" required></textarea>
         <div class="divider">------------------- или -------------------</div>
@@ -435,15 +460,6 @@
       </p>
       <button type="button" class="btn-outline closeTerms">Затвори</button>
     </div>
-  </div>
-  <button id="backToTop" title="Върни се най-горе"></button>
-</body>
-</html>
-</body>
-</html>
-  <button id="backToTop" title="Върни се най-горе"></button>
-</body>
-</html>
   </div>
   <button id="backToTop" title="Върни се най-горе"></button>
 </body>
