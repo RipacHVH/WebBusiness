@@ -205,4 +205,58 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // Currency Toggle Functionality - Make BGN the default choice
+  const currencyBtns = document.querySelectorAll('.currency-btn');
+  const priceElements = document.querySelectorAll('.price-display');
+  
+  // Force BGN as default choice regardless of saved preference
+  let currentCurrency = 'BGN';
+  localStorage.setItem('currency', 'BGN');
+  
+  // Initialize currency display
+  updateCurrencyDisplay();
+  
+  // Currency button event listeners
+  currencyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const currency = e.target.dataset.currency.toUpperCase();
+      currentCurrency = currency;
+      localStorage.setItem('currency', currentCurrency);
+      
+      // Update active states
+      currencyBtns.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      
+      updateCurrencyDisplay();
+    });
+  });
+  
+  function updateCurrencyDisplay() {
+    // Update all price displays
+    priceElements.forEach(element => {
+      const bgnPrice = parseFloat(element.dataset.bgn);
+      const eurPrice = parseFloat(element.dataset.eur);
+      
+      if (currentCurrency === 'BGN') {
+        element.textContent = `${bgnPrice} лв`;
+      } else {
+        element.textContent = `${eurPrice} €`;
+      }
+    });
+    
+    // Update all buttons to reflect current currency
+    currencyBtns.forEach(btn => {
+      if (btn.dataset.currency.toUpperCase() === currentCurrency) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+  
+  // Add smooth transition for price changes
+  priceElements.forEach(element => {
+    element.style.transition = 'all 0.3s ease';
+  });
 });
