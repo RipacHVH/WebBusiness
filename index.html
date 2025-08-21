@@ -24,10 +24,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/x-icon" href="path/to/your/favicon.ico"> -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="path/to/your/apple-touch-icon.png"> -->
   
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="translations.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -35,6 +37,11 @@
   <a id="top" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0;"></a>
   
   <header class="site-header" role="banner">
+    <div class="language-switcher">
+      <button class="lang-btn active" data-lang="bg">BG</button>
+      <span class="lang-separator">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
     <div class="container header-content">
       <div class="logo">
         <a href="#top" style="text-decoration: none; color: inherit;">
@@ -42,10 +49,10 @@
         </a>
       </div>
       <nav aria-label="Главна навигация">
-        <a href="#plans" class="nav-link">Планове</a>
-        <a href="#how-it-works" class="nav-link">Стъпка по стъпка</a>
-        <a href="#clients" class="nav-link">Клиенти</a>
-        <a href="#faq" class="nav-link">Въпроси</a>
+        <a href="#plans" class="nav-plans">Планове</a>
+        <a href="#how-it-works" class="nav-how-it-works">Стъпка по стъпка</a>
+        <a href="#clients" class="nav-clients">Клиенти</a>
+        <a href="#faq" class="nav-faq">Въпроси</a>
         <button class="btn-consult nav-consult-btn" id="navConsultBtn">Безплатна консултация</button>
       </nav>
     </div>
@@ -144,7 +151,7 @@
     </div>
     <p class="price-disclaimer">
       * Всички посочени цени са ориентировъчни и могат да варират според изискванията на проекта. 
-      За точна оферта, <a href="#" id="openConsult3">запазете безплатна консултация</a>.
+      За точна оферта, <a href="#" class="bookConsult" id="openConsult3">запазете безплатна консултация</a>.
     </p>
   </section>
 
@@ -165,14 +172,14 @@
     <article class="client-card loading-placeholder">
       <div class="loading-img"></div>
       <h4></h4>
-      <p>Съдържанието ще бъде налично скоро.</p>
+      <p class="client-description">Съдържанието ще бъде налично скоро.</p>
     </article>
 
     <!-- Трети прозорец - ефект "не зарежда" -->
     <article class="client-card loading-placeholder">
       <div class="loading-img"></div>
       <h4></h4>
-      <p>Съдържанието ще бъде налично скоро.</p>
+      <p class="client-description">Съдържанието ще бъде налично скоро.</p>
     </article>
   </div>
 </section>
@@ -280,6 +287,8 @@
             </div>
           </details>
         </div>
+
+        <!-- Removed duplicated FAQ item -->
 
         <div class="faq-item">
           <details>
